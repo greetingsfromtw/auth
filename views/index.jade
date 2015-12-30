@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title= 'user auth testing'
+	body
+		div(style='float:left;margin:10px;')
+			a(href = '/') Home
+
+		div(style='float:right')
+			if (username && logined)			
+				span(style='margin:10px;') #{username}
+				a(href='/users/logout',style='margin:10px;') Sign Out
+
+			else	
+				a(href='/users/login',style='margin:10px;') Log In
+				a(href='/users/register',style='margin:10px;') Register
+
+		div(style='padding:30px')
+			h1 Index Page

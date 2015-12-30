@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title= 'Register'
+	body
+		div(style='float:left;margin:10px;')
+			a(href='/') Home
+
+
+		div(style='padding:50px;')
+			form(name='register',action='/apis/register',method="post")
+				h1 register		
+				div
+					p
+						label(style='padding-right:50px;') Username
+						input(type='text',name='username',placeholder= 'example@123.com')
+						span(style='margin:15px;') #{namealert}
+					p
+						label(style='padding:right:110px;') password
+						input(type='password',name='password')
+						span(style='margin:15px;') #{pwdalert}
+					p
+						span(style='padding-right:50px;')
+							input(type='submit',name='submit',value='sign up')
